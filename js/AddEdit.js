@@ -1,3 +1,5 @@
+//import  {loadEmployee } from "./flagment/combo";
+
 var path = window.location.pathname;
 var page = path.split("/").pop();
 
@@ -22,6 +24,7 @@ if (page == "OrderAdd.html") {
 }
     
 loadEmployee(sessionStorage.getItem("emp_val"));
+
 loadStore(sessionStorage.getItem("store_val"), localStorage.getItem("usr_val"), localStorage.getItem("type_val"));
 loadPool(sessionStorage.getItem("pool_val"));
 
@@ -55,7 +58,7 @@ function loadEmployee(selected) {
     }
 }
 
-function loadStore(selected, user, type) {
+ function loadStore(selected, user, type) {
 
     const xhttp = new XMLHttpRequest();
     xhttp.open("POST","http://localhost:4462/api/retailso/stored");
@@ -84,7 +87,7 @@ function loadStore(selected, user, type) {
     }
 }
 
-function loadPool(selected) {
+ function loadPool(selected) {
     const xhttp = new XMLHttpRequest();
     xhttp.open("GET","http://localhost:4462/api/retailso/pool");
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -109,7 +112,7 @@ function loadPool(selected) {
     }
 }
 
-function create()
+ function create()
 {
     const xhttp = new XMLHttpRequest();
     xhttp.open("POST","http://localhost:4462/api/retailso/create");
@@ -140,7 +143,7 @@ function create()
     }
 }
 
-function edit()
+ function edit()
 {
     console.log(sessionStorage.getItem("recId_val"));
     const xhttp = new XMLHttpRequest();

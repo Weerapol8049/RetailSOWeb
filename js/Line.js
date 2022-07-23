@@ -1,7 +1,9 @@
+//import {API_LOAD_LINE} from '../js/api.js';
+
 loadTableLine("http://localhost:4462/api/retailsoline/loaddata", sessionStorage.getItem("recId_val"));
 
 function loadTableLine(url, id) {
-    
+    console.log("asdfs");
     const xhttp = new XMLHttpRequest();
     xhttp.open("POST",url);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
@@ -15,7 +17,6 @@ function loadTableLine(url, id) {
             const tableFoot = table.querySelector("tfoot");
             tableBody.innerHTML = "";
 
-            var trHTML = '';
             const objects = JSON.parse(this.responseText);
             for (let data of objects)
             {
@@ -35,7 +36,6 @@ function loadTableLine(url, id) {
                     const td8 = document.createElement("td");
                     const td9 = document.createElement("td");
                     const td10 = document.createElement("td");
-                    
                     td9.style.display = "none";
                     
                     const tdAction = document.createElement("td");
@@ -44,15 +44,16 @@ function loadTableLine(url, id) {
                     const btnEdit = document.createElement("button");
                     btnEdit.innerHTML = 'Edit';
                     btnEdit.onclick = function() {
-                        sessionStorage.setItem("series_val", row["Series"]);
-                        sessionStorage.setItem("model_val", row["Model"]);
-                        sessionStorage.setItem("qty_val", row["Qty"]);
-                        sessionStorage.setItem("amount_val", row["Amount"]);
-                        sessionStorage.setItem("date_val", row["Date"].substring(0,10));
-                        sessionStorage.setItem("sink_val", row["Sink"]);
-                        sessionStorage.setItem("top_val", row["Top"]);
-                        sessionStorage.setItem("recId_line_val", row["RecId"]);
-                        window.location = 'OrderEditPage.html';
+                        sessionStorage.setItem("action_line", "EditLine");
+                        sessionStorage.setItem("series_val", data["Series"]);
+                        sessionStorage.setItem("model_val", data["Model"]);
+                        sessionStorage.setItem("qty_line_val", data["Qty"]);
+                        sessionStorage.setItem("amount_line_val", data["Amount"]);
+                        sessionStorage.setItem("date_line_val", data["Date"].substring(0,10));
+                        sessionStorage.setItem("sink_val", data["Sink"]);
+                        sessionStorage.setItem("top_val", data["Top"]);
+                        sessionStorage.setItem("recId_line_val", data["RecId"]);
+                        window.location = 'LineAddPage.html';
                     };
 
                     const btnDelete = document.createElement("button");
@@ -110,4 +111,10 @@ function loadTableLine(url, id) {
             }
         }
     }
+}
+
+function createline()
+{
+    sessionStorage.setItem("action_line", "add");
+    location.href='LineAddPage.html';
 }

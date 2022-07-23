@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Order</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/css/adminlte.min.css">
+</head>
+<body style="margin-left: 20px;">
+    <!-- Site wrapper -->
+    <div >
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Add order</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">Order add</li>
+                </ol>
+              </div>
+            </div>
+          </div><!-- /.container-fluid -->
+        </section>
+    
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Sales order daily</h3>
+    
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="salesDate">วันที่ขาย</label>
+                    <input type="date" id="salesDate" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="empId">Sales EmpID</label>
+                    <select id="empId" class="form-control custom-select">
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="store">Store Id</label>
+                    <select id="store" class="form-control custom-select">
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="pool">Pool</label>
+                    <select id="pool" class="form-control custom-select">
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="qty">จำนวน</label>
+                    <input type="number" id="qty" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="amount">ยอดเงินรวม</label>
+                    <input type="number" id="amount" class="form-control">
+                  </div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <div class="col-md-6">
+              <div class="card card-secondary">
+                <div class="card-header">
+                  <h3 class="card-title">Customer</h3>
+    
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="custName">ชื่อ - นามสกุล</label>
+                    <input type="text" id="custName" class="form-control">
+                    </div>
+                  <div class="form-group">
+                    <label for="salesOrder">Sales order</label>
+                    <input type="text" id="salesOrder" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="purchOrder">Purchase order</label>
+                    <input type="text" id="purchOrder" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="confirmDate">วันที่ติดตั้ง</label>
+                    <input type="date" id="confirmDate" class="form-control">
+                  </div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <a href="#" class="btn btn-secondary">Cancel</a>
+              <input type="submit" value="Create new Order" class="btn btn-success float-right" onclick="create()">
+            </div>
+          </div>
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+    
+      <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+          <b>Version</b> 3.2.0
+        </div>
+        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+      </footer>
+    
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <script src="/js/AddEdit.js"></script>
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/js/adminlte.min.js"></script>
+
+    </body>
+</html>

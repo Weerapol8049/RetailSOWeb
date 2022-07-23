@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="/css/fonts.css">
+</head><link rel="stylesheet" href="/css/adminlte.min.css">
+<body>
+      <!-- Content Wrapper. Contains page content -->
+      <div style="margin-left: 20px;">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Orders</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">Orders</li>
+                </ol>
+              </div>
+            </div>
+          </div><!-- /.container-fluid -->
+        </section>
+    
+        <!-- Main content -->
+        <section class="content">
+    
+            <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">DataTable with default features</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+
+                  <table id="example1" class="table table-bordered table-striped" >
+                    <thead>
+                      <tr>
+                        <th>ลำดับ</th>
+                        <th>วันที่ขาย/ติดตั้ง</th>
+                        <th>Store</th>
+                        <th>Pool</th>
+                        <th>จำนวน</th>
+                        <th>ยอดเงินรวม</th>
+                        <th>ลูกค้า</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    <!-- <tr>
+                      <td>1</td>
+                      <td>01/02/2563
+                        01/02/2563
+                      </td>
+                      <td>CYK</td>
+                      <td>DOOR PANEL</td>
+                      <td>6.00</td>
+                      <td>25,340.00</td>
+                      <td>สยุมภู กองสุข</td>
+                      <td class="project-actions text-right">
+                        <a class="btn btn-info btn-sm" href="#">
+                            <i class="fas fa-pencil-alt">
+                            </i>
+                            Edit
+                        </a>
+                        <a class="btn btn-danger btn-sm" href="#">
+                            <i class="fas fa-trash">
+                            </i>
+                            Delete
+                        </a>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01/02/2563
+                          01/02/2563
+                        </td>
+                        <td>CYK</td>
+                        <td>DOOR PANEL</td>
+                        <td>6.00</td>
+                        <td>25,340.00</td>
+                        <td>สยุมภู กองสุข</td>
+                        <td class="project-actions text-right">
+                          <a class="btn btn-info btn-sm" href="#">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
+                          <a class="btn btn-danger btn-sm" href="#">
+                              <i class="fas fa-trash">
+                              </i>
+                              Delete
+                          </a>
+                      </td>
+                      </tr> -->
+                    
+                    </tbody>
+                   
+                  </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+    
+      <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+          <b>Version</b> 3.2.0
+        </div>
+        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+      </footer>
+    
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    
+    <!-- jQuery -->
+    <!-- <script src="/js/jquery.min.js"></script> -->
+    <!-- Bootstrap 4 -->
+    <script src="/js/Orders.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/js/adminlte.min.js"></script>
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../plugins/jszip/jszip.min.js"></script>
+    <script src="../plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    
+    <script>
+        $(function () {
+          $("#example1").DataTable({
+            "responsive": true, 
+            "lengthChange": false, 
+            "autoWidth": false,
+            "searching": true, 
+            "paging" : true,
+            "info": true,
+            "ordering": true
+          }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        
+        });
+      </script>
+      
+    </body>
+</html>

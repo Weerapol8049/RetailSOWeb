@@ -1,3 +1,6 @@
+import { onDelete } from "./AddEdit";
+
+
 loaddata2('http://localhost:4462/api/retailso/loaddata');
 
 async function loaddata2(url) {
@@ -36,6 +39,8 @@ async function loaddata2(url) {
             const td6 = document.createElement("td");
             const td7 = document.createElement("td");
             const td8 = document.createElement("td");//RecId
+            const td9 = document.createElement("td");
+            const td10 = document.createElement("td");
             td8.setAttribute("class", "rowHide");
             td8.style.display = "none";
             
@@ -62,10 +67,28 @@ async function loaddata2(url) {
 
             const btnDelete = document.createElement("button");
             btnDelete.innerHTML = 'Delete';
-            btnDelete.onclick = function(){
-              
-            };
-
+            btnDelete.onclick = function() {
+              Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#CFCECE',
+                confirmButtonText: 'YES',
+                cancelButtonText: 'CANCEL'
+              }).then((result) => {
+                onDelete
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    'Deleted!',
+                    'Your order has been deleted.',
+                    'success'
+                  )
+                }
+              })
+            }
+           
             const btnLine = document.createElement("button");
             btnLine.innerHTML = 'Line';
             btnLine.onclick = function(){
@@ -82,6 +105,8 @@ async function loaddata2(url) {
             td6.textContent = row["Amount"].toLocaleString("en-US");   
             td7.textContent = row["CustName"];   
             td8.textContent = row["RecId"];  
+            td9.textContent = row["SalesId"];   
+            td10.textContent = row["PurchId"];  
 
             rowElement.appendChild(td1);
             rowElement.appendChild(td2);
@@ -89,6 +114,8 @@ async function loaddata2(url) {
             rowElement.appendChild(td4);
             rowElement.appendChild(td5);
             rowElement.appendChild(td6);
+            rowElement.appendChild(td9);
+            rowElement.appendChild(td10);
             rowElement.appendChild(td7);
             rowElement.appendChild(td8);
 

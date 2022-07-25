@@ -1,4 +1,4 @@
-import { onDelete } from "./AddEdit";
+//import { onDelete } from "./AddEdit";
 
 
 loaddata2('http://localhost:4462/api/retailso/loaddata');
@@ -78,13 +78,10 @@ async function loaddata2(url) {
                 confirmButtonText: 'YES',
                 cancelButtonText: 'CANCEL'
               }).then((result) => {
-                onDelete
+                
                 if (result.isConfirmed) {
-                  Swal.fire(
-                    'Deleted!',
-                    'Your order has been deleted.',
-                    'success'
-                  )
+                  onDelete(row["RecId"]);
+                  
                 }
               })
             }
@@ -221,6 +218,29 @@ function show(objects) {
     console.log(trBody)           
 }
 
-function addOrder(){
+function onDelete(_recid)
+{
+    console.log("DELTE");
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET","http://localhost:4462/api/retailso/delete/" + _recid);
+    xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhttp.send();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            
+            const objects = JSON.parse(this.responseText);
+            if (objects == "OK") {
+              SSwal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Delete order completed.',
+                showConfirmButton: false,
+                timer: 1500
+              }).then(() => {
+                    window.location = 'OrdersPage.html';
+              });
+            }
 
+        }
+    }
 }
